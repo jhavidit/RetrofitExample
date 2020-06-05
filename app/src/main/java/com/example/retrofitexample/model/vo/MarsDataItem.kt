@@ -1,4 +1,4 @@
-package com.example.retrofitexample.model
+package com.example.retrofitexample.model.vo
 
 
 import com.squareup.moshi.Json
