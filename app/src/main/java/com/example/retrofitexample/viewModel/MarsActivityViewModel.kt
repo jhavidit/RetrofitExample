@@ -6,21 +6,17 @@ import androidx.lifecycle.LiveData
 import com.example.retrofitexample.model.repository.MarsActivityRepository
 import com.example.retrofitexample.model.vo.MarsDataItem
 
-class MarsActivityViewModel(application: Application):AndroidViewModel(application)
-{
-    val showProgress:LiveData<Boolean>
-    val marsData:LiveData<List<MarsDataItem>>
-    private val repository=MarsActivityRepository(application)
+class MarsActivityViewModel(application: Application) : AndroidViewModel(application) {
+    val showProgress: LiveData<Boolean>
+    val marsData: LiveData<List<MarsDataItem>>
+    private val repository = MarsActivityRepository(application)
+
     init {
-        this.showProgress=repository.showProgress
-        this.marsData=repository.marsData
+        this.showProgress = repository.showProgress
+        this.marsData = repository.marsData
     }
-   /* fun changeState()
-  {
-      repository.changeState()
-   }*/
-    fun getMarsData()
-    {
-        repository.getMarsData()
+
+        fun getMarsData() {
+            repository.getMarsData()
+        }
     }
-}
